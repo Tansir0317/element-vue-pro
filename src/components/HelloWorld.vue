@@ -1,8 +1,9 @@
 <script setup lang="ts">
-
+import variables from "@/styles/variables.module.scss";
 defineProps<{ msg: string }>()
-
 const count = ref(0)
+
+console.log("sass变量-variables.bgColor:",variables.bgColor)
 </script>
 
 <template>
@@ -31,7 +32,7 @@ const count = ref(0)
     >.
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-    <div>
+    <div class="btn">
         <el-button type="success"><i-ep-SuccessFilled />Success</el-button>
         <el-button type="info"><i-ep-InfoFilled />Info</el-button>
         <el-button type="warning"><i-ep-WarningFilled />Warning</el-button>
@@ -40,8 +41,11 @@ const count = ref(0)
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .read-the-docs {
   color: #888;
+}
+.btn {
+    background-color: $bg-color;
 }
 </style>

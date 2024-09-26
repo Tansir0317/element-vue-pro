@@ -16,6 +16,7 @@
     "@iconify-json/ep": "^1.2.0",
     "@types/node": "^22.7.0",
     "@vitejs/plugin-vue": "^5.1.2",
+    "sass": "^1.79.3",
     "typescript": "^5.5.3",
     "unplugin-auto-import": "^0.18.3",
     "unplugin-icons": "^0.19.3",

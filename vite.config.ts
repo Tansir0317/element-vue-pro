@@ -50,4 +50,12 @@ export default defineConfig({
       symbolId: 'icon-[dir]-[name]',
     })
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        javascriptEnabled: true,
+        additionalData: `@use "@/styles/variables.scss" as *;`
+      }
+    }
+  }
 })
