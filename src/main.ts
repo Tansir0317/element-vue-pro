@@ -1,6 +1,16 @@
+//core
 import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
 import 'virtual:svg-icons-register';
+import {setupStore} from './store';
+import App from './App.vue'
+
+// css
+import './style.css'
 import 'virtual:uno.css'
-createApp(App).mount('#app')
+
+const app = createApp(App);
+
+//注册 store
+setupStore(app);
+
+app.mount('#app')

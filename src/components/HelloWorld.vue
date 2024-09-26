@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import variables from "@/styles/variables.module.scss";
+import { useCounterStore } from "@/store";
+const counterStore = useCounterStore();
 defineProps<{ msg: string }>()
 const count = ref(0)
 
@@ -39,6 +41,11 @@ console.log("sass变量-variables.bgColor:",variables.bgColor)
         <el-button type="danger"><i-ep-WarnTriangleFilled />Danger</el-button>
         <el-button type="info"><svg-icon icon-class="shuoming"/>SVG 本地图标</el-button>
     </div>
+    <el-button type="primary" @click="counterStore.increment">count++</el-button>
+    <el-form>
+        <el-form-item label="数字："> {{ counterStore.count }}</el-form-item>
+        <el-form-item label="加倍："> {{ counterStore.double }}</el-form-item>
+    </el-form>
 </template>
 
 <style lang="scss" scoped>
