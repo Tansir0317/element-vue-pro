@@ -36,6 +36,7 @@ const count = ref(0)
         <el-button type="info"><i-ep-InfoFilled />Info</el-button>
         <el-button type="warning"><i-ep-WarningFilled />Warning</el-button>
         <el-button type="danger"><i-ep-WarnTriangleFilled />Danger</el-button>
+        <el-button type="info"><svg-icon icon-class="shuoming"/>SVG 本地图标</el-button>
     </div>
 </template>
 
