@@ -7,6 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver }  from 'unplugin-vue-components/resolvers'
 import {createSvgIconsPlugin} from 'vite-plugin-svg-icons';
+import UnoCSS from 'unocss/vite'
 
 const pathSrc = path.resolve(__dirname, 'src');
 
@@ -48,7 +49,8 @@ export default defineConfig({
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
       symbolId: 'icon-[dir]-[name]',
-    })
+    }),
+    UnoCSS(),
   ],
   css: {
     preprocessorOptions: {
@@ -57,5 +59,5 @@ export default defineConfig({
         additionalData: `@use "@/styles/variables.scss" as *;`
       }
     }
-  }
+  },
 })

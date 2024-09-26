@@ -11,7 +11,7 @@ console.log("sass变量-variables.bgColor:",variables.bgColor)
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
+    <p class="text-red">
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
